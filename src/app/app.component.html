@@ -3,9 +3,8 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-img [src]="assets/img/portada.jpg" style="width: 200px; height: 80px;" class="ion-align-items-center"></ion-img>
-          <ion-list-header><h1>Game of Thrones</h1></ion-list-header>
-          <ion-note>Menu</ion-note>
+          <img src="assets/img/portada.jpg" alt="portada">
+          <br>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
