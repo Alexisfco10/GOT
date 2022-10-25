@@ -30,7 +30,7 @@ const routes: Routes = [
   {
     path: 'contratame',
     loadChildren: () => import('./contratame/contratame.module').then( m => m.ContratamePageModule)
-  }
+  },
 ];
 
 @NgModule({

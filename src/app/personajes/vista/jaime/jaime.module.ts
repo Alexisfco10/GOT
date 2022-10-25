@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VistaPageRoutingModule } from './vista-routing.module';
+import { JaimePageRoutingModule } from './jaime-routing.module';
 
-import { VistaPage } from './vista.page';
+import { JaimePage } from './jaime.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VistaPageRoutingModule
+    JaimePageRoutingModule
   ],
-  declarations: [VistaPage]
+  declarations: [JaimePage]
 })
-export class VistaPageModule {}
+export class JaimePageModule {}

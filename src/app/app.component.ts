@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import characters from './personajes/personajes.json'
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',

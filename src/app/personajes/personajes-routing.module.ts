@@ -9,9 +9,17 @@ const routes: Routes = [
     component: PersonajesPage
   },
   {
-    path: 'vista/:id',
-    loadChildren: () => import('./vista/vista.module').then( m => m.VistaPageModule)
-  }
+    path: 'eddard',
+    loadChildren: () => import('./vista/eddard/eddard.module').then( m => m.EddardPageModule)
+  },
+  {
+    path: 'robert',
+    loadChildren: () => import('./vista/robert/robert.module').then( m => m.RobertPageModule)
+  },
+  {
+    path: 'jaime',
+    loadChildren: () => import('./vista/jaime/jaime.module').then( m => m.JaimePageModule)
+  },
 ];
 
 @NgModule({
