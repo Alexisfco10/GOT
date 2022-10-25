@@ -9,7 +9,7 @@ const routes: Routes = [
     component: PersonajesPage
   },
   {
-    path: 'vista',
+    path: 'vista/:id',
     loadChildren: () => import('./vista/vista.module').then( m => m.VistaPageModule)
   }
 ];

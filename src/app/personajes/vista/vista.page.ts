@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-vista',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaPage implements OnInit {
 
-  constructor() { }
+  perfilId:number;
+  character;
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private http: HttpClient
+
+  ) { }
 
   ngOnInit() {
+    this.perfilId = parseInt(this.activatedRoute.snapshot.paramMap.get('id'))
+    this.http.get("http://localhost:3000/characters/" + this.perfilId)
+    .subscribe(res => this.character = res);
   }
 
 }

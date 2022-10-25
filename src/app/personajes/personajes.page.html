@@ -5,13 +5,18 @@
     </ion-buttons>
     <ion-title>Personajes</ion-title>
   </ion-toolbar>
-  <script src="lista-personajes.js"></script>
 </ion-header>
 
 <ion-content>
 
-  <ion-item>
-    <ion-label id="contenidos"></ion-label>
-  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let character of characters" [routerLink]="['/personajes/vista/' + character.id]">
+      <ion-avatar slot="start">
+        <img src="assets/img/personajes/{{character.img}}">
+      </ion-avatar>
+      <ion-label>{{character.nombre}}</ion-label>
+
+    </ion-item>
+  </ion-list>
 
 </ion-content>
